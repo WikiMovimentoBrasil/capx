@@ -1,6 +1,5 @@
 from django.db import models
-
-
+from user_profile.models import User_Profile
 class Event(models.Model):
     name = models.CharField(max_length=128)
     creator = models.ForeignKey(User_Profile, null=True,
