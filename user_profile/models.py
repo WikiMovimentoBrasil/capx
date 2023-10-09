@@ -1,5 +1,5 @@
 from django.db import models
-
+import skills.models as skills
 #TODO trocar ForeignKeys to ManyToManys
 #TODO string em todos os models
 
