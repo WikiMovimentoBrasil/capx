@@ -17,8 +17,8 @@ class User_Profile(models.Model):
     email = models.EmailField(max_length=128)
     twitter = models.CharField(max_length=50)
     discord = models.CharField(max_length=50)
-    skills_known = models.ForeignKey(skills.Skill, null=True, on_delete=models.CASCADE, related_name="skills_known")
-    skills_to_learn = models.ForeignKey(skills.Skill, null=True, on_delete=models.CASCADE, related_name="skills_to_learn")
+    skills_known = models.ForeignKey('skills.Skill', null=True, on_delete=models.CASCADE, related_name="skills_known")
+    skills_to_learn = models.ForeignKey('skills.Skill', null=True, on_delete=models.CASCADE, related_name="skills_to_learn")
     def __str__(self):
         return self.name
 

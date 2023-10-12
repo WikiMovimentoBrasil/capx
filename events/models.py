@@ -1,5 +1,5 @@
 from django.db import models
-
+from user_profile.models import User_Profile  # Import the User_Profile model from the user_profile app
 
 class Event(models.Model):
     name = models.CharField(max_length=128)
