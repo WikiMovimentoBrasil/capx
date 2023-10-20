@@ -8,3 +8,4 @@ Scripts/
 *.sqlite3
 CapX/settings_local.py
 *.pkl
+.vscode
