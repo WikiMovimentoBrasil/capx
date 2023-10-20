@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Capacity Exchange{% endblock %}</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .header{
+      background-color: #007bff;
+      height: 50px;
+    }
+    .header a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    .navbar {
+      float: right;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    .navbar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .navbar li {
+      float: left;
+      margin-right: 10px;
+    }
+
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+
+    .main-content {
+      padding: 20px;
+    }
+
+    .hero-unit {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .hero-unit h1 {
+      font-size: 30px;
+      margin-top: 0;
+    }
+
+    .hero-unit p {
+      font-size: 16px;
+      line-height: 1.5em;
+    }
+
+    .call-to-action {
+      background-color: #007bff;
+      color: #ffffff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .call-to-action a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+
+    .call-to-action a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="#">Home</a>
+      <a href="#">Capacity Exchange</a>
+      <nav class="navbar">
+        <ul>
+          <li><a href="#">Activity</a></li>
+          <li><a href="#">Find</a></li>
+          <li><a href="#">Add</a></li>
+          <li><a href="#">Info</a></li>
+          <li><a href="#">Me</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>
