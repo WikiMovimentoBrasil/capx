@@ -1,1 +1,5 @@
-Django
+asgiref==3.7.2
+Django==4.2.6
+sqlparse==0.4.4
+typing_extensions==4.8.0
+tzdata==2023.3
