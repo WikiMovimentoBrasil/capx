@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 #TODO pensar nas telas básicas
 #TODO criar alguns dados no BD para ter dados para puxar para resultados na tela
+
+def profile(request):
+    return render(request, 'profile.html')

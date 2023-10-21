@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bootstrap4 %}
+{% block content %}
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-3">
+                <img src="{% static 'favicon.ico' %}" class="img-fluid rounded-circle" alt="User Profile Image">
+            </div>
+            <div class="col-md-9">
+                <h1>User's Full Name</h1>
+                <p>Username: @username</p>
+                <p>Pronoun: He/Him</p>
+                <p>Contact Method: Email</p>
+            </div>
+        </div>
+        
+        <div class="mt-4">
+            <h2>Social Media</h2>
+            <p>Twitter: @twitter_handle</p>
+            <p>Facebook: @facebook_handle</p>
+            <p>Instagram: @instagram_handle</p>
+        </div>
+        
+        <div class="mt-4">
+            <h2>Localization Preferences</h2>
+            <p>Region: Region Name</p>
+            <p>Languages: English, French</p>
+            <p>Affiliation: Organization Name</p>
+            <p>Wikimedia Project: Project Name</p>
+        </div>
+        
+        <div class="mt-4">
+            <h2>Skills</h2>
+            <p>Skills Known: Skill 1, Skill 2, Skill 3</p>
+            <p>Skills Desired: Skill 4, Skill 5</p>
+        </div>
+    </div>
+{% endblock %}
