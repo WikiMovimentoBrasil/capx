@@ -40,6 +40,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'CapX.urls'
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -55,6 +57,13 @@ TEMPLATES = [
         },
     },
 ]
+
+DATABASES = {
+    'default':{
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 WSGI_APPLICATION = 'CapX.wsgi.application'
 

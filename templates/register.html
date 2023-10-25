@@ -1,0 +1,22 @@
+{% block title %}Create an account{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="static/css/login.css">
+  </head>
+  <div class="container">
+    <div class="header">
+      <h1>Create an account</h1>
+      <img src="/static/img/wikimedia-logo.png" alt="Wikimedia logo">
+    </div>
+  
+    <form method="post">
+      {{ user_form.as_p }}
+      {% csrf_token %}
+      <input type="submit" value="Create my account" class="btn btn-primary">
+    </form>
+  
+    <div class="footer">
+      <p>Copyright © 2023 Wikimedia Foundation, Inc.</p>
+    </div>
+  </div>
+{% endblock %}

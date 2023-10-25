@@ -65,6 +65,7 @@ class UserProfile(models.Model):
         ("wiki", _("Discussion page")),
     )
 
+
     # PERSONAL INFORMATION
     user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
     groups = models.JSONField(verbose_name=_("Groups"), null=True, blank=True)
@@ -104,17 +105,26 @@ class UserProfile(models.Model):
     skills_wanted = models.ManyToManyField(Skill, verbose_name=_("Skill desired"), related_name="user_desired_skils",
                                            blank=True)
 
+    # def __str__(self):
+    #     if self.first_name:
+    #         if self.last_name:
+    #             if self.middle_name:
+    #                 return self.first_name + " " + self.middle_name[0] + ". " + self.last_name
+    #             else:
+    #                 return self.first_name + " " + self.last_name
+    #         else:
+    #             return self.first_name
+    #     else:
+    #         return self.username
+        
     def __str__(self):
-        if self.first_name:
-            if self.last_name:
-                if self.middle_name:
-                    return self.first_name + " " + self.middle_name[0] + ". " + self.last_name
-                else:
-                    return self.first_name + " " + self.last_name
-            else:
-                return self.first_name
+        """Returns a string representation of the user."""
+        name = self.first_name or self.username
+        if self.middle_name:
+            return f"{name} {self.middle_name[0]}. {self.last_name}"
         else:
-            return self.username
+            return f"{name} {self.last_name}"
+
 
 
 @receiver(post_save, sender=User)
