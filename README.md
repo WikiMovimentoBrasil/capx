@@ -65,6 +65,22 @@ Before you begin, ensure you have met the following requirements:
    ``` bash
    python manage.py loaddata fixtures/initial_data.json
 
+9. Setting up `settings_local.py`
+   
+   Before running the server, you'll need to set up the `settings_local.py` file to store your local configuration. 
+      
+      Follow these steps:
+
+      - In the `Capx` directory/folder, create a new file named `settings_local.py`.
+
+      - Open `settings_local.py` and copy the contents from `settings_local_example.py`   into it.
+
+      Customize `settings_local.py`:
+
+      - Edit the `settings_local.py` file to configure your local settings. This may include database settings, secret keys, API keys, or any other configuration specific to your local environment.
+      
+      - Save the `settings_local.py` file and close it.
+
 9. Start the development server:
    ```bash
     python manage.py runserver
